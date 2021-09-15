@@ -1,0 +1,20 @@
+{
+  "type": "module",
+  "name": "css-shizhan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qianqian-wang/Doraemon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qianqian-wang/Doraemon/issues"
+  },
+  "homepage": "https://github.com/qianqian-wang/Doraemon#readme"
+}
