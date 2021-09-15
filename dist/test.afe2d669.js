@@ -103,7 +103,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({"css.js":[function(require,module,exports) {
+})({"K4Xi":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -111,7 +111,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 var string = "*{box-sizing: border-box;margin: 0;padding: 0;}\n.all{\n    background: rgb(212,236,249);\n    // min-height: 100vh;\n}\n.header{\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    height: 300px;\n    animation-duration: 2s;\n    animation-name: slidein;\n    animation-iteration-count: infinite;\n    animation-direction: alternate;\n   \n}\n@keyframes slidein{\n    from{\n        transform:translateY(0px);\n    }\n    to{\n        transform:translateY(100px);\n    }\n}\n.top{\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n\n}\n.top1{\n    border: 1px solid;\n    width: 30px;\n    height: 15px;\n    background: rgb(252,193,54);\n    border-radius:100px 100px 0 0;\n}\n.top2{\n    border: 1px solid;\n    width:80px;\n    height: 1px;\n    animation-duration: 0.1s;\n    animation-name: rotar;\n    animation-iteration-count: infinite;\n    animation-direction: alternate;\n    z-index: 100;\n}\n@keyframes rotar {\n    from{transform:rotate3D(0,1,0,0deg);}\n    to{transform:rotate3D(0,1,0,360deg);}\n}\n.top3{\n    border: 1px solid;\n    width: 10px;\n    height: 15px;\n    background: rgb(252,193,54);\n}\n.face{\n    border: 1px solid;\n    border-radius: 50%;\n    width: 200px;\n    height: 200px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    background:rgb(53,161,201);\n    position: relative;\n}\n.face2{\n    border: 1px solid;\n    border-radius: 50%;\n    width: 160px;\n    height: 160px;\n    background: white;\n\n}\n.eye1{ \n    display: flex;\n    justify-content: center;\n}\n.eye{\n    border: 1px solid;\n    border-radius: 50%;\n    width: 40px;\n    height:40px;\n    background: white;\n}\n\n.eyes{\n    border: 1px solid;\n    border-radius: 50%;\n    width: 12px;\n    height:18px;\n    margin-left:20px;\n    margin-top: 12px;\n    background: #000;\n}\n.eyes::before{\n    content:'';\n    display: block;\n    border-radius: 50%;\n    width: 5px;\n    height:6px;\n    margin-top: 5px;\n    margin-left:2px;\n    background: #fff;\n}\n.content{\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    margin-top: -6px;\n}\n.line{\n    border: 1px solid;\n    width: 65px;\n    background: #000;\n}\n.line1{\n    margin-top: -2px;\n    transform: rotate(20deg)\n}\n.line2{\n    margin-top: 18px;\n}\n.line3{\n    margin-top: 12px;\n    transform: rotate(-10deg)\n}\n.line4{\n    margin-top: -2px;\n    transform: rotate(-20deg)\n}\n.line5{\n    margin-top: 12px;\n    transform: rotate(10deg)\n}\n.bitou{\n    border: 1px solid;\n    border-radius: 50%;\n    width: 30px;\n    height:30px;\n    background: rgb(177,22,53);\n}\n.bitou::after{\n    content: '';\n    display: block;\n    height:10px;\n    width: 10px;\n    border-radius: 50%;\n    margin-top: 5px;\n    margin-left: 5px;\n    background: #fff;\n}\n.bidi{\n    border: 1px solid;\n    height:13px;\n    width: 1px;\n    margin:auto;\n    background: #000;\n}\n.mouse{\n    border: 1px solid;\n    border-radius:0 0 100px 100px ;\n    height:70px;\n    width: 125px;\n    margin:auto;\n    background: rgb(177,22,53);\n    display: flex;\n    justify-content: center;\n    overflow: hidden;\n}\n.tongue{\n    width: 50px;\n    height: 50px;\n    margin-top: 25px;\n    border-radius: 100px 90px 0 0;\n    background: rgb(202,37,51);\n}\n";
 exports.default = string;
-},{}],"test.js":[function(require,module,exports) {
+},{}],"HdJB":[function(require,module,exports) {
 'use strict';
 
 var _css = require('./css.js');
@@ -179,175 +179,5 @@ var player = {
 };
 
 player.init();
-},{"./css.js":"css.js"}],"C:\\Users\\123\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel\\src\\builtins\\hmr-runtime.js":[function(require,module,exports) {
-var global = arguments[3];
-var OVERLAY_ID = '__parcel__error__overlay__';
-
-var OldModule = module.bundle.Module;
-
-function Module(moduleName) {
-  OldModule.call(this, moduleName);
-  this.hot = {
-    data: module.bundle.hotData,
-    _acceptCallbacks: [],
-    _disposeCallbacks: [],
-    accept: function (fn) {
-      this._acceptCallbacks.push(fn || function () {});
-    },
-    dispose: function (fn) {
-      this._disposeCallbacks.push(fn);
-    }
-  };
-
-  module.bundle.hotData = null;
-}
-
-module.bundle.Module = Module;
-
-var parent = module.bundle.parent;
-if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
-  var hostname = '' || location.hostname;
-  var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '52083' + '/');
-  ws.onmessage = function (event) {
-    var data = JSON.parse(event.data);
-
-    if (data.type === 'update') {
-      console.clear();
-
-      data.assets.forEach(function (asset) {
-        hmrApply(global.parcelRequire, asset);
-      });
-
-      data.assets.forEach(function (asset) {
-        if (!asset.isNew) {
-          hmrAccept(global.parcelRequire, asset.id);
-        }
-      });
-    }
-
-    if (data.type === 'reload') {
-      ws.close();
-      ws.onclose = function () {
-        location.reload();
-      };
-    }
-
-    if (data.type === 'error-resolved') {
-      console.log('[parcel] ✨ Error resolved');
-
-      removeErrorOverlay();
-    }
-
-    if (data.type === 'error') {
-      console.error('[parcel] 🚨  ' + data.error.message + '\n' + data.error.stack);
-
-      removeErrorOverlay();
-
-      var overlay = createErrorOverlay(data);
-      document.body.appendChild(overlay);
-    }
-  };
-}
-
-function removeErrorOverlay() {
-  var overlay = document.getElementById(OVERLAY_ID);
-  if (overlay) {
-    overlay.remove();
-  }
-}
-
-function createErrorOverlay(data) {
-  var overlay = document.createElement('div');
-  overlay.id = OVERLAY_ID;
-
-  // html encode message and stack trace
-  var message = document.createElement('div');
-  var stackTrace = document.createElement('pre');
-  message.innerText = data.error.message;
-  stackTrace.innerText = data.error.stack;
-
-  overlay.innerHTML = '<div style="background: black; font-size: 16px; color: white; position: fixed; height: 100%; width: 100%; top: 0px; left: 0px; padding: 30px; opacity: 0.85; font-family: Menlo, Consolas, monospace; z-index: 9999;">' + '<span style="background: red; padding: 2px 4px; border-radius: 2px;">ERROR</span>' + '<span style="top: 2px; margin-left: 5px; position: relative;">🚨</span>' + '<div style="font-size: 18px; font-weight: bold; margin-top: 20px;">' + message.innerHTML + '</div>' + '<pre>' + stackTrace.innerHTML + '</pre>' + '</div>';
-
-  return overlay;
-}
-
-function getParents(bundle, id) {
-  var modules = bundle.modules;
-  if (!modules) {
-    return [];
-  }
-
-  var parents = [];
-  var k, d, dep;
-
-  for (k in modules) {
-    for (d in modules[k][1]) {
-      dep = modules[k][1][d];
-      if (dep === id || Array.isArray(dep) && dep[dep.length - 1] === id) {
-        parents.push(k);
-      }
-    }
-  }
-
-  if (bundle.parent) {
-    parents = parents.concat(getParents(bundle.parent, id));
-  }
-
-  return parents;
-}
-
-function hmrApply(bundle, asset) {
-  var modules = bundle.modules;
-  if (!modules) {
-    return;
-  }
-
-  if (modules[asset.id] || !bundle.parent) {
-    var fn = new Function('require', 'module', 'exports', asset.generated.js);
-    asset.isNew = !modules[asset.id];
-    modules[asset.id] = [fn, asset.deps];
-  } else if (bundle.parent) {
-    hmrApply(bundle.parent, asset);
-  }
-}
-
-function hmrAccept(bundle, id) {
-  var modules = bundle.modules;
-  if (!modules) {
-    return;
-  }
-
-  if (!modules[id] && bundle.parent) {
-    return hmrAccept(bundle.parent, id);
-  }
-
-  var cached = bundle.cache[id];
-  bundle.hotData = {};
-  if (cached) {
-    cached.hot.data = bundle.hotData;
-  }
-
-  if (cached && cached.hot && cached.hot._disposeCallbacks.length) {
-    cached.hot._disposeCallbacks.forEach(function (cb) {
-      cb(bundle.hotData);
-    });
-  }
-
-  delete bundle.cache[id];
-  bundle(id);
-
-  cached = bundle.cache[id];
-  if (cached && cached.hot && cached.hot._acceptCallbacks.length) {
-    cached.hot._acceptCallbacks.forEach(function (cb) {
-      cb();
-    });
-    return true;
-  }
-
-  return getParents(global.parcelRequire, id).some(function (id) {
-    return hmrAccept(global.parcelRequire, id);
-  });
-}
-},{}]},{},["C:\\Users\\123\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel\\src\\builtins\\hmr-runtime.js","test.js"], null)
-//# sourceMappingURL=/test.3ae66525.map
+},{"./css.js":"K4Xi"}]},{},["HdJB"], null)
+//# sourceMappingURL=/test.afe2d669.map

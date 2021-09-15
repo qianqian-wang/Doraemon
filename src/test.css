@@ -58,7 +58,7 @@
     margin-top: 10px;
     background: rgb(45,45,45);
     color: white;
-    border-radius: 5px;
+    border-radius: 15px;
 }
 
 @media(max-width:500px){
